@@ -1,0 +1,50 @@
+.headerContainer {
+    background-color: blue;
+    color: white;
+    padding-bottom: 50px;
+}
+
+.header {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hitems {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    border: 3px solid darkgoldenrod;
+    ;
+    padding: 0;
+    position: absolute;
+    color: black;
+    background-color: whitesmoke;
+    bottom: -90px;
+}
+
+.hbtn {
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.4);
+    height: 50px;
+    width: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.hbtn:hover {
+    font-weight: 600;
+    background-color: blue;
+}
+
+.hitem {
+    border-left: 3px solid darkgoldenrod;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px
+}

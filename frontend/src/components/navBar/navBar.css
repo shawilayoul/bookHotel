@@ -1,0 +1,67 @@
+.naVcontainer {
+    background-color: blue;
+    color: white;
+    padding-bottom: 50px;
+    margin: 0;
+}
+
+.nav {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topNavleft {
+    font-weight: 900;
+}
+
+.navmobile {
+    display: none;
+}
+
+.topNavright {
+    display: flex;
+    gap: 20px;
+}
+
+.navbtn>button {
+    padding: 10px 20px;
+    color: blue;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbtn>button:hover {
+    color: white;
+    background-color: rgba(0, 0, 255, 0.018);
+}
+
+.registerbtn {
+    margin-right: 10px;
+}
+
+.navBottom {
+    display: flex;
+    gap: 40px;
+}
+
+.active {
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(211, 211, 211, 0.676);
+    border: 2px solid gainsboro;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}

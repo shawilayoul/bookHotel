@@ -1,0 +1,9 @@
+body {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.homeNav {
+    background-color: blue;
+}
