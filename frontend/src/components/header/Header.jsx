@@ -12,6 +12,7 @@ import { DateRange} from 'react-date-range';
 
 const Header = () => {
     const[open,setOpen]= useState(false)
+    const[isOpen, setIsOpen] = useState(false)
     const [date, setDate] = useState([
         {
           startDate: new Date(),
@@ -20,10 +21,18 @@ const Header = () => {
         }
       ]);
       const[options, setOptions] = useState({
-        aduilt: 1,
-        chiidren: 0,
+        adult: 1,
+        children: 0,
         room: 1
       })
+      function handleOption(name, operator){
+           setOptions((prev)=>{
+            return{
+            ...prev,
+               [name]: operator === "i" ? options[name] + 1 :options[name] - 1,
+            };
+           });
+      }
     return (
         <div className='headerContainer'>
             <div className="header">
@@ -59,38 +68,52 @@ const Header = () => {
                     </div>
                     <div className="hitem">
                         <div>
-                        <div className='opetionsearch'>
+                        <div className='opetionsearch' onClick={()=>setIsOpen(!isOpen)}>
                          <BsPerson />
-                        <span>{`${options.aduilt} adult`}</span>
-                        <span>{`${options.chiidren} children`}</span>
+                        <span>{`${options.adult} adult`}</span>
+                        <span>{`${options.children} children`}</span>
                         <span>{`${options.room} room`}</span>
                         </div>
-                        <div className="options">
+                      { isOpen && <div className="options">
                            <div className="optionsItem">
                             <div>Adult</div>
                             <div className="counterbtn">
-                             <button className="increabtn">+</button>
-                             <span className="countervalue">1</span>
-                             <button className="decreabtn">-</button>
+                             <button className="increabtn"
+                               onClick={()=>handleOption("adult","i")}>+</button>
+                             <span className="countervalue">{options.adult}</span>
+                             <button className="decreabtn"
+                              disabled = {options.adult <=1}
+                              onClick={()=>handleOption("adult","d")}>-</button>
                              </div>
                            </div>
                            <div className="optionsItem">
                             <div>Children</div>
                             <div className="counterbtn">
-                             <button className="increabtn">+</button>
-                             <span className="countervalue">0</span>
-                             <button className="decreabtn">-</button>
+                             <button className="increabtn"
+                             onClick={()=>handleOption("children","i")}
+                             >+</button>
+                             <span className="countervalue">{options.children}</span>
+                             <button className="decreabtn"
+                             disabled = {options.children <=0}
+                             onClick={()=>handleOption("children","d")}
+                              >-</button>
                              </div>
                            </div>
                            <div className="optionsItem">
                             <div>room</div>
                             <div className="counterbtn">
-                             <button className="increabtn">+</button>
-                             <span className="countervalue">1</span>
-                             <button className="decreabtn">-</button>
+                             <button className="increabtn"
+                               onClick={()=>handleOption("room","i")}
+                             >+</button>
+                             <span className="countervalue">{options.room}</span>
+                             <button className="decreabtn"
+                             disabled = {options.room <=1}
+                             onClick={()=>handleOption("room","d")}
+                             >-</button>
                              </div>
                            </div>
                         </div>
+                        }
                         </div>
                        
                     </div>

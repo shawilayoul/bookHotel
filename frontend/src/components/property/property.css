@@ -1,0 +1,14 @@
+.propertyContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.propertyImg>img{
+ width: 200px;
+ height: 200px;
+ border-radius: 8px;
+}
+.propertyTiltle> h2{
+    margin: 0;
+}

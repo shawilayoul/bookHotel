@@ -1,0 +1,29 @@
+.featureContainer{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: -1;
+}
+.fcity{
+   flex: 1;
+   position: relative;
+}
+.FcityImag>img{
+    width: 360px;
+    height: 250px;
+    border-radius: 8px;
+}
+.cityTitle{
+    position: absolute;
+    bottom: 50px;
+    color: white;
+    padding-left: 10px;
+}
+h1{
+    margin: 0;
+}

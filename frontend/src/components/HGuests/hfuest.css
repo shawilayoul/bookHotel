@@ -1,0 +1,35 @@
+.homeGuestContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.homGuestItem{
+    background-color:whitesmoke;
+    cursor: pointer;
+}
+
+.homeGuestTiltle{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+h3,h5{
+    margin: 0;
+}
+.homguestImg>img{
+    height: 250px;
+    width: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.rate{
+    display: flex;
+    gap: 5px;
+}
+.rate>button{
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

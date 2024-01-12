@@ -3,7 +3,10 @@ body {
     margin: 0;
     text-decoration: none;
 }
-
+.homeContainer{
+    width: 90%;
+    margin: 0 auto;
+}
 .homeNav {
     background-color: blue;
 }
