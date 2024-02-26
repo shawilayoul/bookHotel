@@ -4,7 +4,7 @@ import bcrypt from "bcrypt"
 export const registerUser = async (req,res)=>{
 try {
     const salt = await bcrypt.genSalt(10)
-    const hashpassword = await bcrypt.hashSync(req.body.password, salt)
+    const hashpassword = bcrypt.hashSync(req.body.password, salt)
     const user = await User({
         username: req.body.username,
         email: req.body.email,
