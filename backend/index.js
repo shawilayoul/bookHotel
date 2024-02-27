@@ -4,7 +4,8 @@ import dotenv from "dotenv"
 import cookieParser from "cookie-parser"
 import hotelRoute from "./routs/hotelRout.js";
 import userAuth from "./routs/auth.js";
-import room from "./routs/roomRout.js"
+import room from "./routs/roomRout.js";
+import user from "./routs/user.js"
 
 dbConnect()
 dotenv.config()
@@ -15,6 +16,7 @@ app.use(cookieParser())
 app.use("/api/hotel",hotelRoute)
 app.use("/api/auth",userAuth)
 app.use("/api/room",room)
+app.use("/api/user",user)
 
 
 app.listen(8000,()=>{

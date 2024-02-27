@@ -27,11 +27,11 @@ export const getAllRoom = async (req, res) => {
     res.status(500).json(error);
   }
 };
-export const getByIdRoom = async (req ,res) => {
-    const singlRomm = await Room.findById(req.params.id)
-    res.status(200).json(singlRomm)
+export const getByIdRoom = async (req, res) => {
+  const singlRomm = await Room.findById(req.params.id);
+  res.status(200).json(singlRomm);
 };
-export const deleteRoom = async (req ,res) => {
-      await Room.findByIdAndDelete(req.params.id);
-    res.status(200).json("the room us been deleted")
+export const deleteRoom = async (req, res) => {
+  await Room.findByIdAndDelete(req.params.id);
+  res.status(200).json("the room us been deleted");
 };
