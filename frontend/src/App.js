@@ -1,12 +1,8 @@
-import React from 'react'
-import Home from './pages/home/Home'
+import {router} from "./routing/route";
+import { RouterProvider } from "react-router-dom";
 
 const App = () => {
-    return (
-        <div>
-            <Home />
-        </div>
-    )
-}
+  return <RouterProvider router={router}></RouterProvider>;
+};
 
-export default App
+export default App;
