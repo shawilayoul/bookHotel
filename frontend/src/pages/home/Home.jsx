@@ -4,17 +4,10 @@ import Features from "../../components/features/Features";
 import Property from "../../components/property/Property";
 import HGuest from "../../components/HGuests/HGuest";
 import Footer from "../../components/footer/Footer";
-import { useEffect } from "react";
+
 
 const Home = () => {
-  useEffect(() => {
-    const getHotel = async () => {
-      const response = await fetch("http://localhost:8000/api/hotel/hotels");
-      const data = await response.json();
-      console.log(data);
-    };
-    getHotel();
-  }, []);
+ 
   return (
     <div>
       <div className="homeNav">
