@@ -1,6 +1,7 @@
 import express from "express";
 import dbConnect from "./DbConnect/db.js";
 import dotenv from "dotenv"
+import cors from "cors"
 import cookieParser from "cookie-parser"
 import hotelRoute from "./routs/hotelRout.js";
 import userAuth from "./routs/auth.js";
@@ -8,10 +9,11 @@ import room from "./routs/roomRout.js";
 import user from "./routs/user.js"
 
 dbConnect()
-dotenv.config()
+dotenv.config() 
 const app = express()
 app.use(express.json())
 app.use(cookieParser())
+app.use(cors())
 //meddleware
 app.use("/api/hotel",hotelRoute)
 app.use("/api/auth",userAuth)
