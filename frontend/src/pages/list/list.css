@@ -28,3 +28,56 @@
 .option input {
     width: 50px;
 }
+.hotelImg img{
+    width: 250px;
+    height: 250px;
+}
+.hotelList{
+    overflow: scroll;
+}
+.hotel{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+.hotelInfo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftInfo h3{
+    color: blue;
+}
+.leftInfo button{
+    color: white;
+    background-color: green;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.leftInfo .studio{
+font-weight: bold;
+}
+.leftInfo .freeCan{
+    color: green;
+    }
+.rightInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.righttop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rightbottom button{
+    padding: 5px 10px;
+    width: 100%;
+}

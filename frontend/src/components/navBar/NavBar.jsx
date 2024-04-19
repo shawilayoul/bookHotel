@@ -2,13 +2,15 @@ import React from 'react'
 import "./navBar.css"
 import { MdLocalTaxi, MdPersonPin, MdFlight, MdOutlineAttractions, MdLocalHotel, MdCarRental } from "react-icons/md"
 import { GiHamburgerMenu, GiWorld } from "react-icons/gi"
+import { useNavigate } from 'react-router-dom'
 
 const NavBar = () => {
+    const navigate = useNavigate()
     return (
         <div className='naVcontainer'>
             <div className="nav">
                 <div className="navTop">
-                    <span className="topNavleft">
+                    <span className="topNavleft" onClick={()=>navigate('/')}>
                         <h2>Booking.com</h2>
                     </span>
                     <div className="topNavright">
@@ -20,7 +22,7 @@ const NavBar = () => {
                     </div>
                 </div>
                 <div className="navBottom">
-                    <span className="navItem active">
+                    <span className="navItem active" onClick={()=>navigate('/hotelList')}>
                         < MdLocalHotel />
                         <h3>Accomadation</h3>
                     </span>

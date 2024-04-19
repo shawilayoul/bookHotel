@@ -50,6 +50,12 @@
     gap: 20px;
     cursor: pointer;
 }
+.hitem input{
+    border: none;
+    height: 2.5rem;
+    width: 15rem;
+    background-color: white;
+}
 .range{
     position: relative;
 }
